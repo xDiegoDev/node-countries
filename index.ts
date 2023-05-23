@@ -27,7 +27,7 @@ for (let line of lines) {
 
   let [population, area] = rest
     .split(/\s+/)
-    .map((str) => parseInt(str.replace(/,/g, ""), 10));
+    .map((str) => parseInt(str.replace(/,/g, ""), 10)); // number 10 is used to indicate decimal numbers should be used. radix
   let density = population / area;
 
   countries.push({ name, population, area, density });
